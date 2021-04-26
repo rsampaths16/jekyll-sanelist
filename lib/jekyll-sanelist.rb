@@ -2,7 +2,7 @@
 
 require 'jekyll-sanelist'
 
-require_relative 'jekyll-sanelist/sanelist' if defined?(Jekyll) && defined?(Liquid)
+require_relative 'jekyll/sanelist' if defined?(Jekyll) && defined?(Liquid)
 
 module Jekyll
   ##
