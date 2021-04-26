@@ -22,7 +22,38 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```html
+<html>
+    {% assign asanelist = alist | sanelist %}
+    {% if asanelist.size == 0 %}
+      <!-- Do something for empty list -->
+    {% elsif asanelist.size == 1 %}
+      <!-- Do something for single-item list -->
+    {% elsif asanelist.size > 1 %}
+      <!-- Do something for multi-item list -->
+    {% endif %}
+
+    {% for element in asanelist %}
+        {% case element.type %{
+            {% when "item" %}
+                <!-- Do someting with element.data in the below block based on where it appears -->
+                {% if element.isFirst and element.isLast %}
+                {% elsif element.isFirst %}
+                {% elsif element.isLast %}
+                {% else %}
+                {% endif %}
+
+            {% when "delimiter" %}
+                <!-- Insert appropriate delimiter in the below block based on where it appears -->
+                {% if element.isFirst and element.isLast %}
+                {% elsif element.isFirst %}
+                {% elsif element.isLast %}
+                {% else %}
+                {% endif %}
+        {% endcase %}
+    {% endfor %}
+</html>
+```
 
 ## Development
 
