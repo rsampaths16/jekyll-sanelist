@@ -2,6 +2,8 @@
 
 require 'jekyll-sanelist'
 
+require_relative 'jekyll-sanelist/sanelist' if defined?(Jekyll) && defined?(Liquid)
+
 module Jekyll
   ##
   # Sanelist plugin contains the sanelist filter
