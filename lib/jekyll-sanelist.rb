@@ -4,7 +4,9 @@ require 'jekyll-sanelist'
 
 module Jekyll
   ##
-  # TODO: Add relevant documentation
+  # Sanelist plugin contains the sanelist filter
+  # The filter is used to produce a list consisting of prefix, items, delimiters and suffix
+  # While iterating you can generate each item appropriately
   module Sanelist
   end
 end
